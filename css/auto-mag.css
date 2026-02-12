@@ -49,6 +49,7 @@ body {
   a {
     color: #8ab4ff;
   }
+}
 
   #comment-form {
   display: flex;
@@ -81,5 +82,5 @@ body {
 #comment-form button:hover {
   opacity: 0.9;
 }
-}
+
 
