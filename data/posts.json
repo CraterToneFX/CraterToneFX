@@ -1,0 +1,99 @@
+[
+  {
+    "title": "Crap Fi Delay",
+    "slug": "delay",
+    "category": "delay",
+    "date": "2026-01-20",
+    "excerpt": "Crazy Delay circuit",
+    "url": "/posts/crapfi.html"
+  },  
+  {
+    "title": "Little Angel Chorus",
+    "slug": "chorus",
+    "category": "chorus",
+    "date": "2026-01-20",
+    "excerpt": "First Chorus circuit",
+    "url": "/posts/littleangel.html"
+  },
+  {
+    "title": "EHX LBP-1",
+    "slug": "Boost",
+    "category": "boost",
+    "date": "2026-01-20",
+    "excerpt": "Versatile boost circuit",
+    "url": "/posts/lbp1.html"
+  },
+  {
+    "title": "Park Auto Wah",
+    "slug": "Wah",
+    "category": "assorted",
+    "date": "2026-01-16",
+    "excerpt": "Auto Wah",
+    "url": "/posts/autowah.html"
+  },
+  {
+    "title": "Ibanez TS9",
+    "slug": "Overdrive",
+    "category": "overdrive",
+    "date": "2026-01-12",
+    "excerpt": "Classic Overdrive",
+    "url": "/posts/ts9.html"
+  },
+  {
+    "title": "AMZ 2 channel splitter",
+    "slug": "AMZ 2 channel splitter",
+    "category": "assorted",
+    "date": "2026-01-09",
+    "excerpt": "Nice little splitter - ABY pedal",
+    "url": "/posts/splitter.html"
+  },
+  {
+    "title": "Allies Fuzz",
+    "slug": "Fuzz?",
+    "category": "fuzz",
+    "date": "2026-01-09",
+    "excerpt": "Is it a fuzz?",
+    "url": "/posts/allies.html"
+  },
+  {
+    "title": "Muffs",
+    "slug": "Muffs",
+    "category": "fuzz",
+    "date": "2026-01-08",
+    "excerpt": "Different muffs I have tried",
+    "url": "/posts/muffs.html"
+  },
+  {
+    "title": "Headbanger Amp",
+    "slug": "Headphone Amp",
+    "category": "amps",
+    "date": "2026-01-06",
+    "excerpt": "Versatile little amp",
+    "url": "/posts/headbanger.html"
+  },
+  {
+    "title": "Electra Distortion",
+    "slug": "Electra",
+    "category": "Distortion",
+    "date": "2026-01-06",
+    "excerpt": "Electra Distortion, simple classic",
+    "url": "/posts/electra.html"
+  },
+  {
+    "title": "DIY",
+    "slug": "Breadboards",
+    "category": "diy",
+    "date": "2026-01-06",
+    "excerpt": "Coming Soon",
+    "url": "/posts/breadboards.html"
+  },
+  {
+    "title": "Smokey Amp",
+    "slug": "First One Tried",
+    "category": "amps",
+    "date": "2026-01-06",
+    "excerpt": "The first circuit I tried to see if I could make it work",
+    "url": "/posts/smokeyamp.html"
+  }
+]
+
