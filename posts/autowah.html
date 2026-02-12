@@ -49,7 +49,7 @@ const headers = {
 };
 
 // Load approved comments
-fetch(`${SUPABASE_URL}/rest/v1/comments?slug=eq.${slug}&approved=eq.true&order=created_at.asc`, {
+fetch(`${SUPABASE_URL}/rest/v1/body?slug=eq.${slug}&approved=eq.true&order=created_at.asc`, {
   headers
 })
 .then(res => res.json())
@@ -75,12 +75,12 @@ document.getElementById("comment-form").addEventListener("submit", e => {
   if (form.website.value) return;
 
   const name = form.name.value.trim();
-  const message = form.message.value.trim();
+  const body = form.body.value.trim();
 
   // Basic spam filter
-  if (message.length < 3 || message.length > 2000) return;
+  if (body.length < 3 || body.length > 2000) return;
 
-  fetch(`${SUPABASE_URL}/rest/v1/comments`, {
+  fetch(`${SUPABASE_URL}/rest/v1/body`, {
     method: "POST",
     headers,
    body: JSON.stringify({
