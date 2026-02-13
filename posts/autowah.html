@@ -32,7 +32,6 @@
     <button type="submit">Post Comment</button>
   </form>
 </section>
-
 <script>
 const SUPABASE_URL = "https://zzkpinctabgkhpvcahyn.supabase.co";
 const SUPABASE_KEY = "sb_publishable_FmVutn8fLccmmfSeRM80lQ_TDqR0kTF";
@@ -45,14 +44,20 @@ const headers = {
   "Authorization": `Bearer ${SUPABASE_KEY}`
 };
 
-// Load approved comments
-fetch(`${SUPABASE_URL}/rest/v1/comments?post_id=eq.${rawSlug}&approved=eq.true&order=created_at.asc`, {
+// Load comments
+fetch(`${SUPABASE_URL}/rest/v1/comments?post_id=eq."${rawSlug}"&approved=eq.true&order=created_at.asc`, {
   headers
 })
 .then(res => res.json())
 .then(data => {
+  if (!Array.isArray(data)) {
+    console.log("Unexpected response:", data);
+    return;
+  }
+
   const list = document.getElementById("comment-list");
   list.innerHTML = "";
+
   data.forEach(c => {
     list.innerHTML += `
       <div class="comment">
@@ -61,7 +66,8 @@ fetch(`${SUPABASE_URL}/rest/v1/comments?post_id=eq.${rawSlug}&approved=eq.true&o
       </div>
     `;
   });
-});
+})
+.catch(err => console.error("Load error:", err));
 
 // Submit comment
 document.getElementById("comment-form").addEventListener("submit", e => {
@@ -83,20 +89,17 @@ document.getElementById("comment-form").addEventListener("submit", e => {
       approved: false
     })
   })
- //.then(() => {
- //   alert("Comment submitted for approval.");
- //   form.reset();
-//  });
-//});
   .then(async res => {
-  const data = await res.text();
-  console.log("Insert status:", res.status);
-  console.log("Insert response:", data);
-  alert("Check console");
+    const text = await res.text();
+    console.log("Insert status:", res.status);
+    console.log("Insert response:", text);
+    alert("Submitted for approval");
+    form.reset();
+  })
+  .catch(err => console.error("Insert error:", err));
 });
 
-
-// Prevent XSS
+// Escape function
 function escapeHtml(text) {
   return text.replace(/[&<>"']/g, function(m) {
     return ({
@@ -109,6 +112,8 @@ function escapeHtml(text) {
   });
 }
 </script>
+
+
 
 </p>
            <p><a href="/index.html">Back To Home</a></p>
